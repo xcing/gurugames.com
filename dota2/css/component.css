@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+/* Tournament */
+#tournamentContainer {
+	background-color: #222222;
+	border: 1px solid #FFC300;
+	overflow: auto;
+	margin: 15px;
+}
+#tournamentRoundHeader ul {
+	padding: 8px 0 5px 12px;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+#tournamentRoundHeader li {
+	display: table-cell;
+	float: none;
+	width: 120px;
+	text-align: center;
+}
+#tournamentRoundHeader li.nextRound {
+	padding-left: 40px;
+}
+.scheduleRound {
+	color: #F87431;
+	font-weight: bold;
+}
+.scheduleDate {
+	color: #FFC300;
+}
+div.jQBracket {
+	float: none !important;
+}

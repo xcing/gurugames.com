@@ -1,0 +1,220 @@
+
+.menu_block  {
+    position: relative;
+    /*position: fixed;
+    height:50px;*/
+    z-index: 999;
+    background: url(../images/menu_bg.png) 0 bottom repeat-x #1d1d1d;
+    border-bottom: 1px solid #000000;
+}
+
+.menu_block_xs  {
+    position: fixed;
+    top: 0px;
+    height:63px;
+    width:100%;
+    z-index: 999;
+    background: url(../images/menu_bg.png) 0 bottom repeat-x #1d1d1d;
+    border-bottom: 1px solid #000000;
+}
+
+nav>.sf-menu {
+    text-align: center;
+    z-index: 999;
+    position: relative;
+}
+nav{ position:relative;padding: 0px 0 0 0;}
+.sf-menu ul {position:absolute;top:-999px; display:none;/* left offset of submenus need to match (see below) */}
+.sf-menu li {float:left;position:relative; }
+.sf-menu>li {
+    z-index: 999;
+    float: left;
+    border-top: 1px solid #4d4d4d;
+    position: relative;
+    border-right: 1px solid #000;
+
+}
+
+
+.sf-menu>li>ul>li {
+    float: none;
+    position: static;
+}
+
+.sf-menu>li.sfHover, .sf-menu>li.current, .sf-menu>li:hover {
+    background: url(../images/li_hover.jpg) 0 0 repeat-x #1f1e1e;
+
+}
+
+.sf-menu>li>a{
+    font-size: 19px;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    padding: 12px 20px 13px;
+    line-height: 29px;
+    z-index: 999;
+    text-shadow: 1px 1px #1a1919;
+    position: relative;
+    border-bottom: 4px solid transparent;
+    background: url(../images/menu_hover.png) -200px bottom no-repeat;
+}
+
+.sf-menu>li.with_ul>a:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    margin-left: -3px;
+    width: 7px;
+    background: url(../images/arrows.png) no-repeat right 0;
+    height: 5px;
+    top: 44px;	
+    pointer-events: none;
+    z-index: 999;
+}
+
+
+.sf-menu>li.sfHover>a, .sf-menu>li.current>a, .sf-menu>li:hover>a:hover {
+    background: url(../images/menu_hover.png) center bottom no-repeat;
+    border-bottom-color: #D59318;
+}
+
+.sf-menu>li>ul>li>a>span {
+    position: absolute;
+    width: 7px;
+    background: url(../images/arrows.png) no-repeat right 0;
+    height: 5px;
+    right: 10px;
+
+    margin-left: -4px;
+    top: 12px;	
+}
+
+
+
+
+
+.sf-menu a{
+    font-size: 16px; 
+    line-height: 21px; 
+    color:#fffefe;
+}
+
+
+
+/*================================>> 2 Level <<========================================*/
+.sf-menu li ul,.sf-menu li.sfHover>ul{
+    top: 63px;
+    width: 193px;
+    left: 0;
+
+    z-index: 999; 
+    padding: 0px 0px 0px;
+
+
+
+}
+.sf-menu li ul li{
+    text-align: left; 
+    float: none !important; 
+}
+
+
+.sf-menu li ul li a{
+    background: #373737;
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 6px 14px 6px;
+    font-weight: 600;
+    line-height: 19px;
+    font-family: 'Orbitron', sans-serif
+        ;
+    color: #fff;
+
+}
+
+.sf-menu li ul li+li {
+    border-top: 1px solid #474a51;
+}
+
+.sf-menu li li a:hover, 
+.sf-menu li.sfHover li.sfHover>a {  
+    background-color: #2c2c2c;
+    color: #cf0606;
+
+}
+
+/*================================>> 3 Level <<========================================*/
+.sf-menu li.sfHover li.sfHover ul{
+    width: 193px;
+    top: 96px !important;
+    background: #f26522 !important;
+    left: 193px !important;
+}
+
+
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+
+@media only screen and (max-width: 995px) {
+
+    .sf-menu>li>a {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
+@media only screen and (max-width: 767px) {
+    .menu_block {
+        float: none !important;
+        margin: 0 0px !important;	
+        padding: 7px 10px 15px;
+        clear: both;
+        left: 0;
+        right: 0;
+    }
+
+
+
+    header nav{
+        float:none;
+        font:12px/15px Arial, Helvetica, sans-serif;
+        text-transform:uppercase;
+        color:#927c67;
+        margin: 0 auto;
+
+
+    }
+    nav:before{
+        /*content:'Menu:';*/
+        font-family: 'Open Sans', sans-serif;
+        display:block;
+        font-weight: bold;
+        margin-bottom:5px;
+        color: #fff;
+
+    }
+    .sf-menu{
+        display:none !important; 
+        float: none;
+    }
+    #mm0{
+        display:none !important;
+        font:12px/15px Arial, Helvetica, sans-serif;
+        color:#202020;
+        width:100%;
+        margin: 0 auto;
+        float: none;
+        outline: none;
+        border:2px solid #fff;
+    }
+
+    .search_block {
+        padding-bottom: 10px !important;	
+    }
+}
